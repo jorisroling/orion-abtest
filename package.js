@@ -1,7 +1,7 @@
 Package.describe({
   name: 'jorisroling:orion-abtest',
   summary: 'A/B Test in Orion',
-  version: '0.0.2',
+  version: '0.0.4',
   git: 'https://github.com/jorisroling/orion-abtest'
 });
 
@@ -14,5 +14,7 @@ Package.onUse(function(api) {
   api.addFiles('abtest.js');
   api.addFiles('abtest_server.js', 'server');
   api.addFiles(['abtest_bootstrap.html','abtest_client.js'], 'client');
-  
+
+  api.export('ABTest');
+  api.export('ABTestServer');  
 });
